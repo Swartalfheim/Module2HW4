@@ -1,10 +1,15 @@
-﻿namespace HW4
+﻿using HW4.Count;
+
+namespace HW4
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Starter starter = new Starter();
+            starter.Start();
+            CountAviation countAviation = new CountAviation();
+            
         }
     }
 }
