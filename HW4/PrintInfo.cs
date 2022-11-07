@@ -1,5 +1,6 @@
 ﻿using HW4.AnimalHabitats;
 using HW4.Count;
+using System;
 
 namespace HW4
 {
@@ -111,6 +112,42 @@ namespace HW4
             Console.WriteLine($"total reptiles in Terrarium: {countTerrarium.CTerrarium()}\n");
             int ct = countTerrarium.CTerrarium();
             Console.WriteLine($"Total animals: {ca + ci + cm + co + cs + ct}");
+        }
+
+        public void RezPrintInfo()
+        {
+            _aviation = new Aviation();
+            _insectarium = new Insectarium();
+            _oceanarium = new Oceanarium();
+            _mammals = new RangeOfMammals();
+            _serpentarium = new Serpentarium();
+            _terrarium = new Terrarium();
+            Console.WriteLine("choose where you want to search\n" +
+                "(you must enter the number of the corresponding section)\n" +
+                "1)Aviation, 2) Insectarium, 3)Oceanarium, 4)Range of Mammals, 5)Serpentarium, 6)Terrarium\n");
+            PrintAllInfo printAllInfo = new PrintAllInfo();
+            string type = Console.ReadLine();
+            switch (type)
+            {
+                case "1":
+                    printAllInfo.Info(_aviation.TypeHabitat());
+                    break;
+                case "2":
+                    printAllInfo.Info(_insectarium.TypeHabitat());
+                    break;
+                case "3":
+                    printAllInfo.Info(_oceanarium.TypeHabitat());
+                    break;
+                case "4":
+                    printAllInfo.Info(_mammals.TypeHabitat());
+                    break;
+                case "5":
+                    printAllInfo.Info(_serpentarium.TypeHabitat());
+                    break;
+                case "6":
+                    printAllInfo.Info(_terrarium.TypeHabitat());
+                    break;
+            }
         }
     }
 }
