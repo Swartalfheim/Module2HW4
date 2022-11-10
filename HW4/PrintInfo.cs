@@ -1,6 +1,5 @@
 ﻿using HW4.AnimalHabitats;
 using HW4.Count;
-using System;
 
 namespace HW4
 {

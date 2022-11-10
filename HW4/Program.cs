@@ -9,7 +9,6 @@ namespace HW4
             Starter starter = new Starter();
             starter.Start();
             CountAviation countAviation = new CountAviation();
-            
         }
     }
 }
